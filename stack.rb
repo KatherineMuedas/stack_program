@@ -7,6 +7,10 @@ class Stack
     @elements << element
   end
 
+  def pop
+    @elements.pop
+  end
+
   def size
     @elements.size
   end
