@@ -28,4 +28,11 @@ class TestStack < Minitest::Test
     stack.push(3)
     refute stack.empty?
   end
+
+  def test_after_n_pushes_to_an_empty_stack_stack_its_size_is_n
+    stack = Stack.new
+    stack.push(2)
+    stack.push(3)
+    assert_equal 2, stack.size
+  end
 end
