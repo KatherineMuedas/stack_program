@@ -16,4 +16,16 @@ class TestStack < Minitest::Test
     assert_equal 2, result
     assert_equal 0, stack.size
   end
+
+  def test_stack_should_be_empty_on_construction
+    stack = Stack.new
+    assert stack.empty?
+  end
+
+  def test_after_n_pushes_to_an_empty_stack_the_stack_is_not_empty
+    stack = Stack.new
+    stack.push(2)
+    stack.push(3)
+    refute stack.empty?
+  end
 end

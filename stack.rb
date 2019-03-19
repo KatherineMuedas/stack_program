@@ -18,4 +18,8 @@ class Stack
   def last
     @elements.last
   end
+
+  def empty?
+    @elements.empty?
+  end
 end
