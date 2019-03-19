@@ -8,6 +8,9 @@ class Stack
   end
 
   def pop
+    if empty?
+      raise 'Cannot pop an empty stack'
+    end
     @elements.pop
   end
 

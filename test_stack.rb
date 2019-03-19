@@ -44,4 +44,11 @@ class TestStack < Minitest::Test
     stack.pop
     assert stack.empty?
   end
+
+  def test_popping_from_an_empty_stack_throws_an_exception
+    stack = Stack.new
+    assert_raises do
+      stack.pop
+    end
+  end
 end
